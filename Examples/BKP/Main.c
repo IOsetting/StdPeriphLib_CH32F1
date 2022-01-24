@@ -8,9 +8,9 @@
 
 /*
  *@Note
- BKPÇÖÈë¼ì²âÀý³Ì£º
- ÇÖÈë¼ì²âÒý½Å(PC13)£¬µ±²úÉúÇÖÈë¼ì²âÊÂ¼þÊ±£¬ËùÓÐÊý¾Ý±¸·Ý¼Ä´æÆ÷ÄÚÈÝ±»Çå³ý£¬
- ²¢´¥·¢ÇÖÈë¼ì²âÖÐ¶Ï¡£
+ BKPä¾µå…¥æ£€æµ‹ä¾‹ç¨‹ï¼š
+ ä¾µå…¥æ£€æµ‹å¼•è„š(PC13)ï¼Œå½“äº§ç”Ÿä¾µå…¥æ£€æµ‹äº‹ä»¶æ—¶ï¼Œæ‰€æœ‰æ•°æ®å¤‡ä»½å¯„å­˜å™¨å†…å®¹è¢«æ¸…é™¤ï¼Œ
+ å¹¶è§¦å‘ä¾µå…¥æ£€æµ‹ä¸­æ–­ã€‚
 
 */
 
@@ -42,8 +42,8 @@ void BKP_Tamper_Init(void)
 	printf( "BKP_DR3:%08x\r\n", BKP->DATAR3 );	
   printf( "BKP_DR4:%08x\r\n", BKP->DATAR4 );	
 	
-//	BKP_TamperPinLevelConfig( BKP_TamperPinLevel_High );  //TPAL:0£¬PC13 set input-pull-down	
-	BKP_TamperPinLevelConfig( BKP_TamperPinLevel_Low );	 //TPAL:1£¬PC13 input-pull-up	
+//	BKP_TamperPinLevelConfig( BKP_TamperPinLevel_High );  //TPAL:0ï¼ŒPC13 set input-pull-down	
+	BKP_TamperPinLevelConfig( BKP_TamperPinLevel_Low );	 //TPAL:1ï¼ŒPC13 input-pull-up	
 	
 	NVIC_InitStructure.NVIC_IRQChannel = TAMPER_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 1;

@@ -8,9 +8,9 @@
 
 /*
  *@Note
- CAN²âÊÔÄ£Ê½£¬°üÀ¨¾²Ä¬Ä£Ê½¡¢»Ø»·Ä£Ê½¡¢»Ø»·¾²Ä¬Ä£Ê½£º
+ CANæµ‹è¯•æ¨¡å¼ï¼ŒåŒ…æ‹¬é™é»˜æ¨¡å¼ã€å›ç¯æ¨¡å¼ã€å›ç¯é™é»˜æ¨¡å¼ï¼š
  CAN_Tx(PB9),CAN_Rx(PB8)
- Standard_Frame£º°üÀ¨ 1¸ö32bit¹ıÂËÆ÷ÆÁ±ÎÎ»Ä£Ê½¡£
+ Standard_Frameï¼šåŒ…æ‹¬ 1ä¸ª32bitè¿‡æ»¤å™¨å±è”½ä½æ¨¡å¼ã€‚
 
 */
 
@@ -29,11 +29,11 @@
 /*******************************************************************************
 * Function Name  : CAN_Test_Mode_Init
 * Description    : Initializes CAN communication test mode.
-* Input          : tsjw£»CAN synchronisation jump width.
-*									 tbs2£ºCAN time quantum in bit segment 1.
-*						  		 tbs1£ºCAN time quantum in bit segment 2.
-*									 brp£ºSpecifies the length of a time quantum.
-*				  				 mode£ºTest mode.     			
+* Input          : tsjwï¼›CAN synchronisation jump width.
+*									 tbs2ï¼šCAN time quantum in bit segment 1.
+*						  		 tbs1ï¼šCAN time quantum in bit segment 2.
+*									 brpï¼šSpecifies the length of a time quantum.
+*				  				 modeï¼šTest mode.     			
 *										 CAN_Mode_LoopBack.					
 *										 CAN_Mode_Silent.		
 *										 CAN_Mode_Silent_LoopBack.	
@@ -89,10 +89,10 @@ void CAN_Test_Mode_Init( u8 tsjw, u8 tbs2, u8 tbs1, u16 brp, u8 mode )
 /*******************************************************************************
 * Function Name  : CAN_Send_Msg
 * Description    : CAN Transmit function.
-* Input          : msg£ºTransmit data buffer.
-*									 len£ºData length.
-* Return         : 0£ºSend successful.
-*									 1£ºSend failed.
+* Input          : msgï¼šTransmit data buffer.
+*									 lenï¼šData length.
+* Return         : 0ï¼šSend successful.
+*									 1ï¼šSend failed.
 *******************************************************************************/
 u8 CAN_Send_Msg( u8 *msg, u8 len )
 {
@@ -133,9 +133,9 @@ u8 CAN_Send_Msg( u8 *msg, u8 len )
 /*******************************************************************************
 * Function Name  : CAN_Receive_Msg
 * Description    : CAN Receive function.
-* Input          : buf£ºReceive data buffer.
+* Input          : bufï¼šReceive data buffer.
 * Output         : None
-* Return         : CanRxStructure.DLC£ºReceive data length.
+* Return         : CanRxStructure.DLCï¼šReceive data length.
 *******************************************************************************/
 u8 CAN_Receive_Msg( u8 *buf )
 {

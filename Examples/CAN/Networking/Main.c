@@ -8,12 +8,12 @@
 
 /*
  *@Note
- CANÕı³£Ä£Ê½£¬±ê×¼Ö¡ºÍÀ©Õ¹Ö¡Êı¾İÊÕ·¢£º
+ CANæ­£å¸¸æ¨¡å¼ï¼Œæ ‡å‡†å¸§å’Œæ‰©å±•å¸§æ•°æ®æ”¶å‘ï¼š
  CAN_Tx(PB9),CAN_Rx(PB8)
- ¸ÃÀı³ÌĞèÍâ½ÓCANÊÕ·¢Æ÷£¬¿ÉÑİÊ¾ Standard_Frame ºÍ Extended_Frame¡£
- Standard_Frame£º°üÀ¨ 1¸ö32bit¹ıÂËÆ÷ÆÁ±ÎÎ»Ä£Ê½¡¢2¸ö16bit¹ıÂËÆ÷ÆÁ±ÎÎ»Ä£Ê½¡¢
- 1¸ö32bit±êÊ¶·ûÁĞ±íÄ£Ê½¡¢2¸ö16bit±êÊ¶·ûÁĞ±íÄ£Ê½£»
- Extended_Frame£º1¸ö32bit¹ıÂËÆ÷ÆÁ±ÎÎ»Ä£Ê½¡£
+ è¯¥ä¾‹ç¨‹éœ€å¤–æ¥CANæ”¶å‘å™¨ï¼Œå¯æ¼”ç¤º Standard_Frame å’Œ Extended_Frameã€‚
+ Standard_Frameï¼šåŒ…æ‹¬ 1ä¸ª32bitè¿‡æ»¤å™¨å±è”½ä½æ¨¡å¼ã€2ä¸ª16bitè¿‡æ»¤å™¨å±è”½ä½æ¨¡å¼ã€
+ 1ä¸ª32bitæ ‡è¯†ç¬¦åˆ—è¡¨æ¨¡å¼ã€2ä¸ª16bitæ ‡è¯†ç¬¦åˆ—è¡¨æ¨¡å¼ï¼›
+ Extended_Frameï¼š1ä¸ª32bitè¿‡æ»¤å™¨å±è”½ä½æ¨¡å¼ã€‚
 
 */
 
@@ -38,11 +38,11 @@
 /*******************************************************************************
 * Function Name  : CAN_Mode_Init
 * Description    : Initializes CAN communication test mode.
-* Input          : tsjw£»CAN synchronisation jump width.
-*									 tbs2£ºCAN time quantum in bit segment 1.
-*						  		 tbs1£ºCAN time quantum in bit segment 2.
-*									 brp£ºSpecifies the length of a time quantum.
-*				  				 mode£ºTest mode.
+* Input          : tsjwï¼›CAN synchronisation jump width.
+*									 tbs2ï¼šCAN time quantum in bit segment 1.
+*						  		 tbs1ï¼šCAN time quantum in bit segment 2.
+*									 brpï¼šSpecifies the length of a time quantum.
+*				  				 modeï¼šTest mode.
 *                    CAN_Mode_Normal.
 *										 CAN_Mode_LoopBack.					
 *										 CAN_Mode_Silent.		
@@ -94,7 +94,7 @@ void CAN_Mode_Init( u8 tsjw, u8 tbs2, u8 tbs1, u16 brp, u8 mode )
 	CAN_FilterInitSturcture.CAN_FilterMaskIdHigh = 0xFFE0;  	
 	CAN_FilterInitSturcture.CAN_FilterMaskIdLow = 0x0006;	 
 	
-/* identifier/mask mode, Two 16-bit filters, StdId: 0x317£¬0x316 */
+/* identifier/mask mode, Two 16-bit filters, StdId: 0x317ï¼Œ0x316 */
 //	CAN_FilterInitSturcture.CAN_FilterMode = CAN_FilterMode_IdMask;	
 //	CAN_FilterInitSturcture.CAN_FilterScale = CAN_FilterScale_16bit;	
 //	CAN_FilterInitSturcture.CAN_FilterIdHigh = 0x62E0;	
@@ -102,7 +102,7 @@ void CAN_Mode_Init( u8 tsjw, u8 tbs2, u8 tbs1, u16 brp, u8 mode )
 //	CAN_FilterInitSturcture.CAN_FilterMaskIdHigh = 0x62C0; 	
 //	CAN_FilterInitSturcture.CAN_FilterMaskIdLow = 0xFFF8;		
 	
-/* identifier list mode, One 32-bit filter, StdId: 0x317£¬0x316 */
+/* identifier list mode, One 32-bit filter, StdId: 0x317ï¼Œ0x316 */
 //	CAN_FilterInitSturcture.CAN_FilterMode = CAN_FilterMode_IdList;	
 //	CAN_FilterInitSturcture.CAN_FilterScale = CAN_FilterScale_32bit;	
 //	CAN_FilterInitSturcture.CAN_FilterIdHigh = 0x62E0;	
@@ -137,10 +137,10 @@ void CAN_Mode_Init( u8 tsjw, u8 tbs2, u8 tbs1, u16 brp, u8 mode )
 /*******************************************************************************
 * Function Name  : CAN_Send_Msg
 * Description    : CAN Transmit function.
-* Input          : msg£ºTransmit data buffer.
-*									 len£ºData length.
-* Return         : 0£ºSend successful.
-*									 1£ºSend failed.
+* Input          : msgï¼šTransmit data buffer.
+*									 lenï¼šData length.
+* Return         : 0ï¼šSend successful.
+*									 1ï¼šSend failed.
 *******************************************************************************/
 u8 CAN_Send_Msg( u8 *msg, u8 len )
 {
@@ -188,9 +188,9 @@ u8 CAN_Send_Msg( u8 *msg, u8 len )
 /*******************************************************************************
 * Function Name  : CAN_Receive_Msg
 * Description    : CAN Receive function.
-* Input          : buf£ºReceive data buffer.
+* Input          : bufï¼šReceive data buffer.
 * Output         : None
-* Return         : CanRxStructure.DLC£ºReceive data length.
+* Return         : CanRxStructure.DLCï¼šReceive data length.
 *******************************************************************************/
 u8 CAN_Receive_Msg( u8 *buf )
 {
