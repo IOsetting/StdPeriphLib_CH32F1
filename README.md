@@ -2,7 +2,7 @@
 
 StdPeriphLib_CH32F1 is a SPL style library for CH32F1 series MCU
 * For arm-none-eabi-gcc toolchains
-* Compatible with VSCode+PlatformIO under Linux
+* Compatible with VSCode+PlatformIO
 
 ## CH32F103 Series MCU
 
@@ -11,7 +11,7 @@ StdPeriphLib_CH32F1 is a SPL style library for CH32F1 series MCU
 * Clones of STMicroelectronics STM32F103 series
 * Featured with DAC and USB support
 
-### Types And Technical Specifications
+## Technical Specifications
 
 * Cortex-M3 core, 72MHz system main frequency;
 * Single cycle multiplication and hardware division;
@@ -35,6 +35,8 @@ StdPeriphLib_CH32F1 is a SPL style library for CH32F1 series MCU
 * CRC calculation unit, 96-bit chip unique ID;
 * Serial single-wire debugging (SWD) interface;
 * Package: LQFP64M, LQFP48, QFN48.
+
+## Types
 
 | Part NO      | Freq  | Flash | SRAM | GPIO | Adv TIM(16bit) | GPTIM(16bit) | GPTIM(32bit) | Basic TIM(16bit) | SysTick(24bit) | WDOG | RTC |  ADC(12bit) Unit/Channel | Touchkey |  DAC(12bit) | OPA | TRNG | SPI | IIS | IIC | U(S)ART | CAN | USB2.0 FS | USB2.0 HS | Ethernet | BLE | SDIO | FSMC | DVP | VDD     | Package  |
 |  ----------- | ----- | ----- |----- |----- |     ---------- |   ---------- |   ---------- |       ---------- |          ----- |----- | --- |               ---------- |    ----- |       ----- | --- |----- | --- | --- | --- |   ----- | --- |     ----- |     ----- |    ----- | --- |----- |----- | --- |   ----- |   ------ |    
